@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aqua;
+            font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .formWrapper {
+            display: flex;
+            width: 200%; /* Two forms side by side */
+            transition: transform 0.97s ease-in-out;
+        }
+
+        .formContainer {
+            width: 500px;
+            background-color: white;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 7px;
+            padding-bottom: 20px;
+            margin: 100px auto;
+			padding-left:25px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 10px;
+            padding-top: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        input {
+            height: 30px;
+            width: 90%;
+            margin: 10px;
+            padding: 4px 10px;
+            border-radius: 7px;
+            border: 1px solid gray;
+            font-size: 14px;
+        }
+
+        button {
+            height: 35px;
+            width: 92%;
+            border: none;
+            background-color: rgb(4, 167, 4);
+            border-radius: 7px;
+            color: white;
+            font-size: 15px;
+            margin: 10px;
+            padding: 7px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(10, 194, 10);
+        }
+
+        p {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 10px;
+        }
+
+        p a {
+            cursor: pointer;
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formWrapper" id="formWrapper">
+        <!-- Register Form -->
+        <div class="formContainer">
+            <h1>Create Account</h1>
+            <input type="text" id="fullName" placeholder="Enter Your Full Name" required>
+            <input type="email" id="regEmail" placeholder="Enter your Email" required>
+            <input type="text" id="phoneNumber" placeholder="Enter your PhoneNumber" required>
+            <input type="text" id="userName" placeholder="Enter your User Name" required>
+            <input type="password" id="regPassword" placeholder="Enter your Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm your Password">
+
+            <button id="registerBtn">Register</button>
+            <p>Already have an account? <a id="loginLink">Login</a></p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="formContainer">
+            <h1>Login</h1>
+            <input type="text" id="loginEmail" placeholder="Enter your UserName/Email" required>
+            <input type="password" id="loginPassword" placeholder="Enter your Password" required>
+
+            <button id="loginBtn">Login</button>
+            <p>New here? <a id="registerLink">Register</a></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
